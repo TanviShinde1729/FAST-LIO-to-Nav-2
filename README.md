@@ -12,3 +12,5 @@ ros2 run rqt_tf_tree rqt_tf_tree
 
 ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
 ros2 topic echo /cmd_vel
+
+put nav2 and slam params files in LiDAR_ws/
