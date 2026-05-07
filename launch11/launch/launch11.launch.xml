@@ -1,0 +1,69 @@
+<launch>
+
+    <!-- Unitree LiDAR -->
+    <include file="$(find-pkg-share unitree_lidar_ros2)/launch.py" />
+
+    <!-- FAST_LIO -->
+    <include file="$(find-pkg-share fast_lio)/launch/mapping.launch.py">
+        <arg name="config_file" value="unilidar_l2.yaml"/>
+    </include>
+
+    <!-- PointCloud to LaserScan -->
+    <node pkg="pointcloud_to_laserscan"
+          exec="pointcloud_to_laserscan_node"
+          name="pointcloud_to_laserscan"
+          output="screen">
+
+        <remap from="cloud_in" to="/cloud_registered"/>
+
+        <param name="target_frame" value="unilidar_lidar"/>
+        <param name="min_height" value="-5.0"/>
+        <param name="max_height" value="5.0"/>
+    </node>
+
+    <!-- Static TF odom -> camera_init -->
+    <node pkg="tf2_ros"
+          exec="static_transform_publisher"
+          name="odom_to_camera_init"
+          args="0 0 0 0 0 0 1 odom camera_init" />
+
+    <!-- Static TF body -> base_link -->
+    <node pkg="tf2_ros"
+          exec="static_transform_publisher"
+          name="body_to_base"
+          args="0 0 0 0 0 0 1 body base_link" />
+
+    <!-- Static TF base_link -> imu -->
+    <node pkg="tf2_ros"
+          exec="static_transform_publisher"
+          name="base_to_imu"
+          args="0 0 0 0 0 0 1 base_link unilidar_imu_initial" />
+
+    <!-- SLAM Toolbox -->
+    <include file="$(find-pkg-share slam_toolbox)/launch/online_async_launch.py">
+        <arg name="slam_params_file"
+             value="/home/tanvi/LiDAR_ws/slam_params.yaml"/>
+    </include>
+
+    <!-- TF Tree -->
+    <node pkg="rqt_tf_tree"
+          exec="rqt_tf_tree"
+          name="rqt_tf_tree"
+          output="screen" />
+
+    <!-- Nav2 -->
+    <include file="$(find-pkg-share nav2_bringup)/launch/navigation_launch.py">
+        <arg name="params_file"
+             value="/home/tanvi/LiDAR_ws/nav2_params.yaml"/>
+        <arg name="use_sim_time"
+             value="false"/>
+    </include>
+
+    <!-- RViz2 -->
+    <node pkg="rviz2"
+          exec="rviz2"
+          name="rviz2"
+          output="screen"
+          args="-d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz" />
+
+</launch>

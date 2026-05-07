@@ -1,0 +1,22 @@
+[0.433s] Invoking command in '/home/tanvi/LiDAR_ws/launch11/build/launch11': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tanvi/LiDAR_ws/launch11/build/launch11 -- -j8 -l8
+[2.393s] Invoked command in '/home/tanvi/LiDAR_ws/launch11/build/launch11' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tanvi/LiDAR_ws/launch11/build/launch11 -- -j8 -l8
+[2.492s] Invoking command in '/home/tanvi/LiDAR_ws/launch11/build/launch11': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tanvi/LiDAR_ws/launch11/build/launch11
+[2.516s] -- Install configuration: ""
+[2.516s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11//launch
+[2.516s] -- Installing: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11//launch/launch11.launch.xml
+[2.524s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/ament_index/resource_index/package_run_dependencies/launch11
+[2.524s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/ament_index/resource_index/parent_prefix_path/launch11
+[2.524s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/environment/ament_prefix_path.sh
+[2.524s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/environment/ament_prefix_path.dsv
+[2.524s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/environment/path.sh
+[2.524s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/environment/path.dsv
+[2.525s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/local_setup.bash
+[2.525s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/local_setup.sh
+[2.525s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/local_setup.zsh
+[2.525s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/local_setup.dsv
+[2.525s] -- Installing: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.dsv
+[2.581s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/ament_index/resource_index/packages/launch11
+[2.581s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/cmake/launch11Config.cmake
+[2.582s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/cmake/launch11Config-version.cmake
+[2.582s] -- Up-to-date: /home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.xml
+[2.588s] Invoked command in '/home/tanvi/LiDAR_ws/launch11/build/launch11' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tanvi/LiDAR_ws/launch11/build/launch11

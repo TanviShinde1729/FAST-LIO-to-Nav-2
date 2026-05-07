@@ -1,0 +1,103 @@
+[1.485s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.485s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x78a867a77130>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78a867a76a40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78a867a76a40>>, mixin_verb=('build',))
+[11.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[11.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[11.550s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[11.550s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[11.550s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[11.550s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[11.550s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/tanvi/LiDAR_ws/launch11'
+[11.551s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[11.551s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[11.552s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[11.552s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[11.552s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[11.552s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[11.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[11.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[11.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[11.685s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'launch11'
+[11.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[11.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[11.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[11.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[11.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[12.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[12.274s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[12.281s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 392 installed packages in /opt/ros/humble
+[12.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'cmake_args' from command line to 'None'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'cmake_target' from command line to 'None'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'cmake_clean_cache' from command line to 'False'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'cmake_clean_first' from command line to 'False'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'cmake_force_configure' from command line to 'False'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'ament_cmake_args' from command line to 'None'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'catkin_cmake_args' from command line to 'None'
+[12.370s] Level 5:colcon.colcon_core.verb:set package 'launch11' build argument 'catkin_skip_building_tests' from command line to 'False'
+[12.370s] DEBUG:colcon.colcon_core.verb:Building package 'launch11' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tanvi/LiDAR_ws/launch11/build/launch11', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tanvi/LiDAR_ws/launch11/install/launch11', 'merge_install': False, 'path': '/home/tanvi/LiDAR_ws/launch11', 'symlink_install': False, 'test_result_base': None}
+[12.371s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[12.372s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[12.372s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tanvi/LiDAR_ws/launch11' with build type 'ament_cmake'
+[12.372s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tanvi/LiDAR_ws/launch11'
+[12.404s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[12.404s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.404s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.461s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tanvi/LiDAR_ws/launch11/build/launch11': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/tanvi/LiDAR_ws/launch11 -DCMAKE_INSTALL_PREFIX=/home/tanvi/LiDAR_ws/launch11/install/launch11
+[19.762s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tanvi/LiDAR_ws/launch11/build/launch11' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/tanvi/LiDAR_ws/launch11 -DCMAKE_INSTALL_PREFIX=/home/tanvi/LiDAR_ws/launch11/install/launch11
+[19.764s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tanvi/LiDAR_ws/launch11/build/launch11': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tanvi/LiDAR_ws/launch11/build/launch11 -- -j8 -l8
+[19.798s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tanvi/LiDAR_ws/launch11/build/launch11' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tanvi/LiDAR_ws/launch11/build/launch11 -- -j8 -l8
+[19.807s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tanvi/LiDAR_ws/launch11/build/launch11': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tanvi/LiDAR_ws/launch11/build/launch11
+[19.816s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(launch11)
+[19.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tanvi/LiDAR_ws/launch11/build/launch11' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tanvi/LiDAR_ws/launch11/build/launch11
+[19.921s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11' for CMake module files
+[19.923s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11' for CMake config files
+[19.923s] Level 1:colcon.colcon_core.shell:create_environment_hook('launch11', 'cmake_prefix_path')
+[19.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/hook/cmake_prefix_path.ps1'
+[19.942s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/hook/cmake_prefix_path.dsv'
+[19.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/hook/cmake_prefix_path.sh'
+[19.971s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/bin'
+[19.971s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/lib/pkgconfig/launch11.pc'
+[19.971s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/lib/python3.10/site-packages'
+[19.972s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/bin'
+[19.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.ps1'
+[20.000s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.dsv'
+[20.025s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.sh'
+[20.081s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.bash'
+[20.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.zsh'
+[20.277s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tanvi/LiDAR_ws/launch11/install/launch11/share/colcon-core/packages/launch11)
+[20.280s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(launch11)
+[20.281s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11' for CMake module files
+[20.282s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11' for CMake config files
+[20.283s] Level 1:colcon.colcon_core.shell:create_environment_hook('launch11', 'cmake_prefix_path')
+[20.284s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/hook/cmake_prefix_path.ps1'
+[20.285s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/hook/cmake_prefix_path.dsv'
+[20.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/hook/cmake_prefix_path.sh'
+[20.288s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/bin'
+[20.288s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/lib/pkgconfig/launch11.pc'
+[20.289s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/lib/python3.10/site-packages'
+[20.290s] Level 1:colcon.colcon_core.environment:checking '/home/tanvi/LiDAR_ws/launch11/install/launch11/bin'
+[20.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.ps1'
+[20.292s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.dsv'
+[20.293s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.sh'
+[20.294s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.bash'
+[20.297s] INFO:colcon.colcon_core.shell:Creating package script '/home/tanvi/LiDAR_ws/launch11/install/launch11/share/launch11/package.zsh'
+[20.298s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tanvi/LiDAR_ws/launch11/install/launch11/share/colcon-core/packages/launch11)
+[20.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[20.299s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[20.299s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[20.299s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[20.598s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[20.598s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[20.598s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[21.083s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[21.084s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tanvi/LiDAR_ws/launch11/install/local_setup.ps1'
+[21.111s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tanvi/LiDAR_ws/launch11/install/_local_setup_util_ps1.py'
+[21.138s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tanvi/LiDAR_ws/launch11/install/setup.ps1'
+[21.142s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tanvi/LiDAR_ws/launch11/install/local_setup.sh'
+[21.143s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tanvi/LiDAR_ws/launch11/install/_local_setup_util_sh.py'
+[21.145s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tanvi/LiDAR_ws/launch11/install/setup.sh'
+[21.147s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tanvi/LiDAR_ws/launch11/install/local_setup.bash'
+[21.159s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tanvi/LiDAR_ws/launch11/install/setup.bash'
+[21.166s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tanvi/LiDAR_ws/launch11/install/local_setup.zsh'
+[21.168s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tanvi/LiDAR_ws/launch11/install/setup.zsh'

@@ -1,0 +1,4 @@
+Invoking command in '/home/tanvi/LiDAR_ws/launch11/build/launch11': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tanvi/LiDAR_ws/launch11/build/launch11 -- -j8 -l8
+Invoked command in '/home/tanvi/LiDAR_ws/launch11/build/launch11' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tanvi/LiDAR_ws/launch11/build/launch11 -- -j8 -l8
+Invoking command in '/home/tanvi/LiDAR_ws/launch11/build/launch11': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tanvi/LiDAR_ws/launch11/build/launch11
+Invoked command in '/home/tanvi/LiDAR_ws/launch11/build/launch11' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tanvi/LiDAR_ws/launch11/build/launch11
