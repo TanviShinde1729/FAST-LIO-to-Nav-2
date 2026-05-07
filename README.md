@@ -3,8 +3,7 @@ Make a make file or use 11 terminals.
 Terminal1:  ros2 launch unitree_lidar_ros2 launch.py\
 Terminal2:  ros2 launch fast_lio mapping.launch.py config_file:=unilidar_l2.yaml\
 Terminal3:  ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node   --ros-args   -r cloud_in:=/cloud_registered   -p target_frame:=unilidar_lidar   -p min_height:=-5.0   -p max_height:=5.0
-Terminal4:  ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node   --ros-args   -r cloud_in:=/cloud_registered   -p target_frame:=unilidar_lidar   -p min_height:=-5.0   -p max_height:=5.0\
-
+Terminal4: ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 odom camera_init
 Terminal5: ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 body base_link\
 Terminal6: ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 base_link unilidar_imu_initial\
 Terminal7: ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/tanvi/LiDAR_ws/slam_params.yaml\
