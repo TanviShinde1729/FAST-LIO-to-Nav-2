@@ -14,3 +14,8 @@ Terminal10: ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2
 Terminal11: ros2 topic echo /cmd_vel\
 
 put nav2 and slam params files in LiDAR_ws/
+
+Source commands:
+source /opt/ros/humble/setup.bash 
+source /home/tanvi/LiDAR_ws/FL_ws/install/setup.bash
+source /home/tanvi/LiDAR_ws/unilidar_sdk2/unitree_lidar_ros2/install/setup.bash
