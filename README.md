@@ -13,6 +13,9 @@ Terminal9: ros2 launch nav2_bringup navigation_launch.py   params_file:=/home/ta
 Terminal10: ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz\
 Terminal11: ros2 topic echo /cmd_vel\
 
+
+For octamap : ros2 run octomap_server octomap_server_node --ros-args -r cloud_in:=/cloud_registered -p frame_id:=camera_init -p base_frame_id:=body -p resolution:=0.05 -p point_cloud_min_z:=0.2 -p point_cloud_max_z:=1.0
+
 put nav2 and slam params files in LiDAR_ws/
 
 Source commands:
