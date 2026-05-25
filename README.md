@@ -28,7 +28,7 @@ ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 base_link unilidar_i
 ```
 Terminal7:
 ```bash
-ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/tanvi/LiDAR_ws/slam_params.yaml\
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/roboticsclub/LiDAR_ws/slam_params.yaml\
 ```
 Terminal8: 
 ```bash
@@ -36,11 +36,11 @@ ros2 run rqt_tf_tree rqt_tf_tree
 ```
 Terminal9: 
 ```bash
-ros2 launch nav2_bringup navigation_launch.py   params_file:=/home/tanvi/LiDAR_ws/nav2_params.yaml   use_sim_time:=false
+ros2 launch nav2_bringup navigation_launch.py   params_file:=/home/roboticsclub/LiDAR_ws/nav2_params.yaml   use_sim_time:=false
 ```
 Terminal10:
 ```bash
-ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz\
+ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
 ```
 
 Terminal11: 
