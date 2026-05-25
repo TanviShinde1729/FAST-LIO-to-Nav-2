@@ -10,19 +10,49 @@ Terminal2:
 ros2 launch fast_lio mapping.launch.py config_file:=unilidar_l2.yaml
 ```
 
-Terminal3:  ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node   --ros-args   -r cloud_in:=/cloud_registered   -p target_frame:=unilidar_lidar   -p min_height:=-5.0   -p max_height:=5.0
-Terminal4: ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 odom camera_init
-Terminal5: ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 body base_link\
-Terminal6: ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 base_link unilidar_imu_initial\
-Terminal7: ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/tanvi/LiDAR_ws/slam_params.yaml\
-Terminal8: ros2 run rqt_tf_tree rqt_tf_tree\
-Terminal9: ros2 launch nav2_bringup navigation_launch.py   params_file:=/home/tanvi/LiDAR_ws/nav2_params.yaml   use_sim_time:=false\
+Terminal3: 
+```bash
+ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node   --ros-args   -r cloud_in:=/cloud_registered   -p target_frame:=unilidar_lidar   -p min_height:=-5.0   -p max_height:=5.0
+```
+Terminal4: 
+```bash
+ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 odom camera_init
+```
+Terminal5: 
+```bash
+ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 body base_link\
+```
+Terminal6: 
+```bash
+ros2 run tf2_ros static_transform_publisher   0 0 0 0 0 0 1 base_link unilidar_imu_initial\
+```
+Terminal7:
+```bash
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/tanvi/LiDAR_ws/slam_params.yaml\
+```
+Terminal8: 
+```bash
+ros2 run rqt_tf_tree rqt_tf_tree
+```
+Terminal9: 
+```bash
+ros2 launch nav2_bringup navigation_launch.py   params_file:=/home/tanvi/LiDAR_ws/nav2_params.yaml   use_sim_time:=false
+```
+Terminal10:
+```bash
+ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz\
+```
 
-Terminal10: ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz\
-Terminal11: ros2 topic echo /cmd_vel\
+Terminal11: 
+```bash
+ros2 topic echo /cmd_vel
+```
 
 
-For octamap : ros2 run octomap_server octomap_server_node --ros-args -r cloud_in:=/cloud_registered -p frame_id:=camera_init -p base_frame_id:=body -p resolution:=0.05 -p point_cloud_min_z:=0.2 -p point_cloud_max_z:=1.0
+For octamap :
+```bash
+ros2 run octomap_server octomap_server_node --ros-args -r cloud_in:=/cloud_registered -p frame_id:=camera_init -p base_frame_id:=body -p resolution:=0.05 -p point_cloud_min_z:=0.2 -p point_cloud_max_z:=1.0
+```
 
 put nav2 and slam params files in LiDAR_ws/
 
