@@ -1,0 +1,71 @@
+<launch>
+    <!-- Unitree LiDAR -->
+    <include file="$(find-pkg-share unitree_lidar_ros2)/launch.py" />
+    <!-- FAST_LIO -->
+    <include file="$(find-pkg-share fast_lio)/launch/mapping.launch.py">
+        <arg name="config_file" value="unilidar_l2.yaml"/>
+    </include>
+    <!-- PointCloud to LaserScan -->
+    <node pkg="pointcloud_to_laserscan"
+          exec="pointcloud_to_laserscan_node"
+          name="pointcloud_to_laserscan"
+          output="screen">
+        <remap from="cloud_in" to="/cloud_registered"/>
+        <param name="target_frame" value="camera_init"/>
+        <param name="min_height" value="0.1"/>
+        <param name="max_height" value="1.5"/>
+    </node>
+    <!-- Octomap Server (replaces SLAM Toolbox) -->
+    <node pkg="octomap_server"
+      exec="octomap_server_node"
+      name="octomap_server"
+      output="screen">
+        <param name="frame_id" value="camera_init"/>
+        <param name="resolution" value="0.05"/>
+        <param name="sensor_model.max_range" value="10.0"/>
+        <param name="point_cloud_min_z" value="0.2"/>
+        <param name="point_cloud_max_z" value="1.2"/>
+        <param name="occupancy_min_z" value="0.2"/>
+        <param name="occupancy_max_z" value="1.2"/>
+        <remap from="cloud_in" to="/cloud_registered"/>
+        <remap from="projected_map" to="/map"/>
+    </node>
+    <!-- Static TF odom -> camera_init -->
+    <node pkg="tf2_ros"
+          exec="static_transform_publisher"
+          name="odom_to_camera_init"
+          args="0 0 0 0 0 0 1 odom camera_init" />
+    <!-- Static TF body -> base_link -->
+    <node pkg="tf2_ros"
+          exec="static_transform_publisher"
+          name="body_to_base"
+          args="0 0 0 0 0 0 1 body base_link" />
+    <!-- Static TF base_link -> imu -->
+    <node pkg="tf2_ros"
+          exec="static_transform_publisher"
+          name="base_to_imu"
+          args="0 0 0 0 0 0 1 base_link unilidar_imu_initial" />
+    <!-- Static TF map -> odom (needed since no SLAM Toolbox) -->
+    <node pkg="tf2_ros"
+          exec="static_transform_publisher"
+          name="map_to_odom"
+          args="0 0 0 0 0 0 1 map odom" />
+    <!-- TF Tree -->
+    <node pkg="rqt_tf_tree"
+          exec="rqt_tf_tree"
+          name="rqt_tf_tree"
+          output="screen" />
+    <!-- Nav2 -->
+    <include file="$(find-pkg-share nav2_bringup)/launch/navigation_launch.py">
+        <arg name="params_file"
+             value="/home/tanvi/LiDAR_ws/nav2_params.yaml"/>
+        <arg name="use_sim_time"
+             value="false"/>
+    </include>
+    <!-- RViz2 -->
+    <node pkg="rviz2"
+          exec="rviz2"
+          name="rviz2"
+          output="screen"
+          args="-d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz" />
+</launch>
