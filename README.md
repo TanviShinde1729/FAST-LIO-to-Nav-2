@@ -9,6 +9,10 @@ Terminal2:
 ```bash
 ros2 launch fast_lio mapping.launch.py config_file:=unilidar_l2.yaml
 ```
+Bridge 
+```bash
+ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+```
 
 Terminal3: 
 ```bash
